@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Mind</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- SweetAlert2 for user-friendly alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: #080808;
+            --text-color: #fff;
+            --main-color: #0ef;
+            --button-bg: #0056b3;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: default; 
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--text-color);
+            margin-left: 4rem;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: var(--main-color);
+        }
+
+        .signin {
+            padding: 10px;
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            background-color: green;
+            transition: background-color 0.3s;
+        }
+
+        .signin:hover {
+            background-color: #004494;
+        }
+
+        .signup, .get-started {
+            padding: 10px;
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .signup:hover, .get-started:hover {
+            background-color: #004494; /* Darker blue on hover */
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 150px auto 50px;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .appointment-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .appointment-form label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .appointment-form input, .appointment-form select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .appointment-form .error-message {
+            color: red;
+            font-size: 0.9rem;
+        }
+
+        .appointment-form button {
+            background-color: var(--button-bg);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .appointment-form button:hover {
+            background-color: darkblue;
+        }
+
+        .navbar a.active {
+            background-color: green; /* Green background */
+            color: white; /* White text */
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            display: none; /* Show hamburger on mobile */
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+
+            #main_navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: block; /* Show hamburger on mobile */
+            }
+
+            .menu {
+                display: none; /* Hide menu initially */
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .menu li {
+                text-align: center;
+                width: 100%;
+            }
+
+            .menu.active {
+                display: flex; /* Show menu when active */
+            }
+        }
+
+        .error-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Vital Mind</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="BookAppointment.html">Book Appointment</a>
+            <a href="SignIn.html"><button class="signin">Sign In</button></a>
+            <a href="Signup.html"><button class="signup">Sign Up</button></a>
+        </nav>
+
+        <nav class="navbar">
+            <div class="hamburger" id="menu-btn">&#9776;</div> <!-- Hamburger Icon -->
+            
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="BookAppointment.html">Book Appointment</a></li>
+                <li><a href="SignIn.html">
+                    <button class="signin">Sign In</button>
+                </a></li>
+                <li><a href="Signup.html">
+                    <button class="signup">Sign Up</button>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form class="appointment-form" id="appointment">
+            <h2><label style="color: #ccc;font-size: 30px;">Book An Appointment</label>
+
+            </h2>
+
+            <div class="form-group">
+                <label style="color: white;">First Name:</label>
+                <input type="text" name="first_name" id="first_name" required>
+                <span class="error-message" id="error_first_name">Please provide first name *</span>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: white;">Last Name:</label>
+                <input type="text" name="last_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: white;">Company:</label>
+                <input type="text" name="company" id="company" required>
+                <span class="error-message" id="error_company">Please provide Company *</span>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: white;">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <span class="error-message" id="error_email">Please provide proper Email *</span>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: white;">Country:</label>
+                <select name="country" id="country_name" required>
+                    <option value="">Select</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <span class="error-message" id="error_country">Please provide Country *</span>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: white;">City:</label>
+                <select name="city" id="city_name" required>
+                    <option value="">Select</option>
+                    <option value="New York">New York</option>
+                    <option value="London">London</option>
+                    <option value="Toronto">Toronto</option>
+                </select>
+                <span class="error-message" id="error_city">Please provide City *</span>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: white;">Phone Number:</label>
+                <input type="tel" name="phone_number" pattern="[0-9]+" maxlength="10" required>
+            </div>
+            <head>
+                <style>
+                    .form-group label {
+                        color: white;
+                    }
+                </style>
+            </head>
+
+            <button type="submit" onclick="bookanappointment()">Submit</button>
+            <button type="button" onclick="history.back()">Back</button>
+        </form>
+    </div>
+</body>
+<script defer src="js/script.js"></script>
+</html>

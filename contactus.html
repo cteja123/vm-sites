@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Vital Mind</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Import the Poppins font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #080808;
+            color: #fff;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: #080808;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: 600;
+            cursor: default; 
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: #fff;
+            margin-left: 4rem;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: #0ef;
+        }
+
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .navbar a.active {
+            background-color: green; /* Green background */
+            color: white; /* White text */
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            display: none; /* Show hamburger on mobile */
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+
+            #main_navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: block; /* Show hamburger on mobile */
+            }
+
+            .menu {
+                display: none; /* Hide menu initially */
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .menu li {
+                text-align: center;
+                width: 100%;
+            }
+
+            .menu.active {
+                display: flex; /* Show menu when active */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Vital Mind</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="BookAppointment.html">Book Appointment</a>
+            <a href="SignIn.html">
+                <button class="signin">Sign In</button>
+            </a>
+            <a href="Signup.html">
+                <button class="signin">Sign Up</button>
+            </a>
+        </nav>
+
+        <nav class="navbar">
+            <div class="hamburger" id="menu-btn">&#9776;</div> <!-- Hamburger Icon -->
+            
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="BookAppointment.html">Book Appointment</a></li>
+                <li><a href="SignIn.html">
+                    <button class="signin">Sign In</button>
+                </a></li>
+                <li><a href="Signup.html">
+                    <button class="signup">Sign Up</button>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Us section -->
+    <section class="section" id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or would like to learn more about our services, please feel free to reach out to us.</p>
+        <p>📍 Location: London, United Kingdom</p>
+        <p>📧 Email: <a href="mailto:info@vmintechgen.com" style="color: #0ef;">info@vmintechgen.com</a></p>
+        <p>📞 Phone: <a href="tel:+447931157813" style="color: #0ef;">+44 7931 157813</a></p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/company/vitalmind-ai" style="color: #0ef;">VitalMind AI</a></p>
+    </section>
+
+    <script defer src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Mind</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Import the Poppins font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Root CSS variables */
+        :root {
+            --bg-color: #080808;
+            --text-color: #fff;
+            --main-color: #0ef;
+            --button-bg: #0056b3; /* Button background color */
+        }
+
+        body {
+            background: var(--bg-color);
+            color: #fff;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: default; 
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--text-color);
+            margin-left: 4rem;
+            transition: .3s;
+        }
+
+
+        .navbar a:hover {
+            color: var(--main-color);
+        }
+
+        .signin {
+            padding: 10px;
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            background-color: green;
+            transition: background-color 0.3s;
+        }
+
+        .signin:hover {
+            background-color: #004494; /* Darker blue on hover */
+        }
+
+        .signup, .get-started {
+            padding: 10px;
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .signup:hover, .get-started:hover {
+            background-color: #004494; /* Darker blue on hover */
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 100px; /* Adjust for header */
+        }
+
+        .home-content h1 {
+            font-size: 5.6rem;
+        }
+
+        .home-content h3 {
+            font-size: 3.2rem;
+            font-weight: 400;
+        }
+
+        .home-content h2 {
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        /* New section styling */
+        .why-standout {
+            margin: 50px 9%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .why-standout h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .why-standout p {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .navbar a.active {
+            background-color: green; /* Green background */
+            color: white; /* White text */
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            display: none; /* Show hamburger on mobile */
+        }
+
+        .who-we-are-section {
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* gap: 50px; */
+            margin-top: 150px;
+        }
+        /* Responsive design */
+        @media screen and (max-width: 1253px) { /* use 768px for less max-width*/
+
+            #main_navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: block; /* Show hamburger on mobile */
+            }
+
+            .menu {
+                display: none; /* Hide menu initially */
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .menu li {
+                text-align: center;
+                width: 100%;
+            }
+
+            .menu.active {
+                display: flex; /* Show menu when active */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Vital Mind</a>
+        <nav class="navbar" id="main_navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="BookAppointment.html">Book Appointment</a>
+            <a href="SignIn.html">
+                <button class="signin">Sign In</button>
+            </a>
+            <a href="Signup.html">
+                <button class="signup">Sign Up</button>
+            </a>
+        </nav>
+        <nav class="navbar">
+            <div class="hamburger" id="menu-btn">&#9776;</div> <!-- Hamburger Icon -->
+            
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="BookAppointment.html">Book Appointment</a></li>
+                <li><a href="SignIn.html">
+                    <button class="signin">Sign In</button>
+                </a></li>
+                <li><a href="Signup.html">
+                    <button class="signup">Sign Up</button>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Who we are section -->
+    <div class="who-we-are-section" id="about">
+        <h1>About Us</h1>
+        <p>At VitalMind, we are dedicated to transforming the technological landscape for businesses of all sizes through our comprehensive IT solutions. Our expertise spans custom software development, where we create tailored solutions to enhance operational efficiency, to crafting visually appealing and user-friendly websites. We also offer scalable and secure cloud services, ensuring your business can thrive in the digital age with confidence and security. Our commitment to innovation and excellence drives us to deliver services that not only meet but exceed our clients' expectations.</p>
+    </div>
+
+    <!-- About Us section -->
+    <div class="aboutus-section" id="about">
+        <h1>About Us</h1>
+        <p>At VitalMind, we are dedicated to transforming the technological landscape for businesses of all sizes through our comprehensive IT solutions. Our expertise spans custom software development, where we create tailored solutions to enhance operational efficiency, to crafting visually appealing and user-friendly websites. We also offer scalable and secure cloud services, ensuring your business can thrive in the digital age with confidence and security. Our commitment to innovation and excellence drives us to deliver services that not only meet but exceed our clients' expectations.</p>
+    </div>
+</body>
+<script defer src="js/script.js"></script>
+
+</html>

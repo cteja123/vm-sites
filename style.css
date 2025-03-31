@@ -1,0 +1,353 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Root CSS variables */
+:root {
+    /* --bg-color: #080808; */
+    --second-bg-color: #030508;
+    --text-color: #0a0909;
+    --main-color: #0ef;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    /* background: var(--bg-color); */
+    color: #0a0909;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+
+.logo{
+    font-size:  2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor:default; 
+}
+
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,.navbar a.Active {
+
+    color: var(--main-color);
+}
+.signin{
+    
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    
+    border-radius: 8px; /* Curved button */
+    cursor: pointer;
+}
+/* Get Started */
+.Getstarted{
+    display: block; /* Makes the button a block element */
+    padding: 18px;
+    background-color: #0056b3;
+    color: white;
+    border: none; /* Remove var(--bg-color) if it's not defined */
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px auto; /* Centers the button horizontally */
+}
+/*
+.homebackground{
+        margin: 0;
+        margin-top: -130px;
+        margin-bottom: -130px;
+        padding: 0;
+        width: 100vw;  
+        height: 100vh; /* Full viewport height */ /* background: url('logo.png') no-repeat  center/contain;
+    
+}This is for the logo used in the home page 
+*/.homebackground {
+    perspective: 1000px; /* Optional for 3D effects */
+}
+
+.animated-image {
+    transition: transform 0.5s ease-in-out; /* Animation */
+    width: 300px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is block-level */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Scale the image on hover */
+.animated-image:hover {
+    transform: scale(1.1); /* 10% scale up */
+}
+
+
+.why{
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+.home-content h2 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+.home-content h1 {
+    font-size: 5.6rem;
+}
+.standout h1{
+text-align: center;
+color: var(--text-color);
+margin-top: auto;
+}
+.standout h3{
+    align-items: center;
+color: var(--text-color);
+margin-top: 10%;
+margin-bottom: 10%;
+font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the text */
+    text-align: center;
+}
+/*sinup and login sheets css*/
+/* Style for the button */
+.signin-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: var(--text-color);
+    border-radius: 8px; /* Rounded edges */
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the Sign In box */
+.signin-box {
+    width: 350px;
+    height:450px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 19px; /* Curved edges */
+    text-align: center;
+    color: var(--text-color);
+    margin: 100px auto;
+}
+.signin-box h2{
+    color:#1f242d;
+}
+.signin-box p{
+    color: #1f242d;
+}
+.signin-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 8px; /* Rounded input fields */
+}
+
+.signin-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    
+    border-radius: 8px; /* Curved button */
+    cursor: pointer;
+}
+
+.signin-box button:hover {
+    background-color: #9f94d3;
+}
+
+
+
+
+
+/*social media icons */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+}
+
+#icons {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Centers them vertically */
+    gap: 15px; /* Space between icons */
+    padding: 20px; /* Adds some spacing */
+    background-color: #ccc; /* Keep or change the background */
+}
+
+    
+    /* to give social media its own color*/
+.social-media a:nth-child(1) { color: #1877F2; border-color: #1877F2; } /* Facebook */
+.social-media a:nth-child(2) { color: #1DA1F2; border-color: #1DA1F2; } /* Twitter */
+.social-media a:nth-child(3) { color: #E4405F; border-color: #E4405F; } /* Instagram */
+.social-media a:nth-child(4) { color: #0077B5; border-color: #0077B5; } /* LinkedIn */
+
+
+
+/*appointment */
+.form-group {
+    width:100%;
+    height:fit-content;
+    padding: 10px 20px;
+    text-align: left;;
+    font-size: 16px;
+    border: none;
+    color:black ;
+    border-radius: 8px; /* Rounded edges */
+    cursor: pointer;
+}
+.form-group-box{
+    color:#f7f6f6;
+}
+.form-group h2{
+    color:#0c0c0c;
+}
+.appointment-form h2{
+    color:#0c0c0c;
+}
+
+.form-group input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border: 1px solid #0c0c0c;
+    color: black;
+    border-radius: 8px; /* Rounded input fields */
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    color: rgb(7, 7, 7);
+    border: none;
+    align-content: center;
+    border-radius: 8px; /* Curved button */
+    cursor: pointer;
+}
+
+.container{
+    width: 550px;
+    height:950px;
+    padding: 20px;
+    background-color: white;
+    
+    border-radius: 18px; /* Curved edges */
+    text-align: center;
+    color:var(--text-color);
+    margin: 100px auto;
+}
+/* here I wanted to make the select drop down same as others */
+input, select {
+    width: 80%; /* Makes all elements the same width */
+    height: 40px; /* Adjust height as needed */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #0a0909;
+    border-radius: 5px; /* Optional: rounded corners */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.submit button {
+    background-color: #007bff;
+    color: var(--text-color); /* Uses a variable for text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px; /* Rounded edges */
+    cursor: pointer;
+}
+
+/* Back button style */
+.back-btn {
+    background-color: #6c757d; /* Gray color for back button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+}
+/*am using container to align buttons together*/
+
+.alignbuttons{
+    display: flex; /* Aligns buttons in a single row */
+    gap: 10px; /* Adds spacing between buttons */
+    justify-content: center; /* Aligns buttons to the left */
+    align-content: center; /* Centers buttons vertically */
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Vital Mind</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Import the Poppins font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #080808;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: #080808;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: 600;
+            cursor: default; 
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: #fff;
+            margin-left: 4rem;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: #0ef;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 150px;
+        }
+
+        .service-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0ef;
+            margin-bottom: 10px;
+        }
+
+        .service-card button {
+            background-color: #004494;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .service-card button:hover {
+            background-color: darkblue;
+        }
+
+        .navbar a.active {
+            background-color: green; /* Green background */
+            color: white; /* White text */
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            display: none; /* Show hamburger on mobile */
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 1253px) {
+
+            #main_navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: block; /* Show hamburger on mobile */
+            }
+
+            .menu {
+                display: none; /* Hide menu initially */
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .menu li {
+                text-align: center;
+                width: 100%;
+            }
+
+            .menu.active {
+                display: flex; /* Show menu when active */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Vital Mind</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="BookAppointment.html">Book Appointment</a>
+            <a href="SignIn.html">
+                <button class="signin">Sign In</button>
+            </a>
+            <a href="Signup.html">
+                <button class="signin">Sign Up</button>
+            </a>
+        </nav>
+
+        <nav class="navbar">
+            <div class="hamburger" id="menu-btn">&#9776;</div> <!-- Hamburger Icon -->
+            
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="BookAppointment.html">Book Appointment</a></li>
+                <li><a href="SignIn.html">
+                    <button class="signin">Sign In</button>
+                </a></li>
+                <li><a href="Signup.html">
+                    <button class="signup">Sign Up</button>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="service-container">
+        <div class="service-card">
+            <h3>Enterprise</h3>
+            <div class="price">$600/month</div>
+            <p>Some key features</p>
+            <ul>
+                <li>Scalable cloud architecture</li>
+                <li>Custom enterprise software</li>
+                <li>Robust security protocols</li>
+            </ul>
+            <button>Buy enterprise now</button>
+        </div>
+        <div class="service-card">
+            <h3>Professional</h3>
+            <div class="price">$200/month</div>
+            <p>Some key features</p>
+            <ul>
+                <li>Comprehensive cybersecurity measures</li>
+                <li>Advanced software solutions</li>
+                <li>Enhanced cloud capabilities</li>
+            </ul>
+            <button>Buy professional now</button>
+        </div>
+        <div class="service-card">
+            <h3>Starter</h3>
+            <div class="price">$50/month</div>
+            <p>Some key features</p>
+            <ul>
+                <li>Essential cloud services</li>
+                <li>Standard cybersecurity support</li>
+                <li>Basic software tools</li>
+            </ul>
+            <button>Buy starter now</button>
+        </div>
+    </div>
+</body>
+<script defer src="js/script.js"></script>
+</html>
