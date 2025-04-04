@@ -2098,6 +2098,7 @@ html {
     --base-color-system--error-red: #f8e4e4;
     --base-color-system--error-red-dark: #3b0b0b;
     --base-color-system--focus-state: #2d62ff;
+    --base-color-system--focus-orange: #eb7b1a;
     --border-color--border-secondary: var(--base-color-brand--dark-purple);
     --link-color--link-secondary: var(--base-color-neutral--black);
     --link-color--link-alternate: var(--base-color-neutral--white);
@@ -3547,8 +3548,8 @@ html {
   }
   
   .button-main {
-    border: 1px solid var(--base-color-brand--main-purple);
-    background-color: var(--base-color-brand--main-purple);
+    border: 1px solid var(--base-color-system--focus-orange);
+    background-color: var(--base-color-system--focus-orange);
     color: var(--text-color--text-primary);
     border-radius: 12px;
     padding: 1rem 2rem;
@@ -3561,6 +3562,7 @@ html {
   
   .button-main:hover {
     background-color: #6f41d240;
+    border: 1px solid var(--base-color-brand--main-purple);
     box-shadow: inset 0 -4px 20px #6f41d280;
   }
   
@@ -4342,7 +4344,7 @@ html {
   }
   
   .navbar11_link:hover, .navbar11_link.w--current {
-    color: var(--base-color-brand--light-purple);
+    color: var(--base-color-system--focus-orange);
   }
   
   .navbar11_menu-dropdown {
@@ -4475,7 +4477,7 @@ html {
   .text-custom_gradient {
     color: var(--base-color-brand--text_heading);
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(202deg, #fff, #9573de 53%, #fff);
+    background-image: linear-gradient(202deg, #fff, #eb7b1a 53%, #fff);
     -webkit-background-clip: text;
     background-clip: text;
   }
@@ -6458,7 +6460,7 @@ html {
     z-index: 0;
     opacity: .5;
     filter: blur(300px);
-    background-image: linear-gradient(#601ef9, #601ef900);
+    background-image: linear-gradient(#eb7b1a, #601ef900);
     width: 73.25rem;
     height: 35.625rem;
     position: absolute;
@@ -8432,7 +8434,7 @@ html {
     z-index: -1;
     opacity: .75;
     filter: blur(200px);
-    background-image: linear-gradient(#601ef9, #fff0);
+    background-image: linear-gradient(#eb7b1a, #fff0);
     border-radius: 100%;
     width: 50rem;
     height: 24rem;
@@ -9915,7 +9917,7 @@ html {
   .home-hero_typed {
     color: var(--base-color-brand--text_heading);
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(202deg, #fff, #9573de 53%, #fff);
+    background-image: linear-gradient(202deg, #fff, #eb7b1a 53%, #fff);
     -webkit-background-clip: text;
     background-clip: text;
     flex-flow: row;
